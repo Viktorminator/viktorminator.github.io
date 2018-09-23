@@ -95,11 +95,42 @@ export default {
     });
   },
   /**
+   * Return all pages (paginated)
+   * @param  string slug Page slug (e.g. 'hello-world')
+   * @return Promise Filtered response
+   */
+  getPages() {
+    return new Promise((resolve, reject) => {
+      request.defaults.baseURL = this.baseUrl;
+      request.get(`pages`).then(response => {
+        const data = [...response.data];
+        if (response.status === 200 && response.data.length > 0) {
+          const filtered = {
+            total: response.headers["x-wp-total"],
+            totalPages: response.headers["x-wp-totalpages"],
+            data: data.map(item => ({
+              id: item.id,
+              title: item.title.rendered,
+              content: item.content.rendered,
+              excerpt: item.excerpt.rendered,
+              slug: item.slug
+            }))
+          };
+          resolve(filtered);
+        } else {
+          reject(response);
+        }
+      });
+    });
+  },
+  /**
    * Returns category data and all posts under it (paginated)
    * @param  string slug Category slug (e.g. 'news')
    * @return Promise Filtered response
    */
   getCategory(slug) {
+    console.log("Request to categories");
+
     return new Promise((resolve, reject) => {
       request.defaults.baseURL = this.baseUrl;
       return request

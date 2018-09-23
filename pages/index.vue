@@ -1,143 +1,137 @@
 <template>
   <div>
-    <section class="header">
-      <categories :categories="categories"></categories>
-      <img class="logo" src="~assets/logo.svg">
-
-      <h2 class="subtitle">
-        WordPress as a Progressive Web App
-      </h2>
-    </section>
-    <section class="container">
-      <div>
-        <div class="content">
-          <post-list v-if="posts" :posts="posts" title="Recent Posts"></post-list>
-        </div>
+      <PrimaryMenu v-if="pages" :pages="pages"/>
+      <h1 class="big-home">
+      <img src="/css/i/engraving-locomotive.gif" alt="" />Локомотив вашего бизнеса
+    </h1>
+    <div class="plate-attention">
+      <div class="cor-tl">
       </div>
-    </section>
+      <div class="cor-tr">
+      </div>
+      <div class="cor-bl">
+      </div>
+      <div class="cor-br">
+      </div>
+      <p>Наш адрес:
+        <br />ул. Земляной вал, дом 59, стр. 2, этаж 7, пом. № 11.
+      </p>
+      <p>Режим работы:
+        <br />10:00—18:00 в будние дни.
+      </p>
+    </div>
+    <p class="home">Наша компания не просто оказывает услуги по бухгалтерскому, кадровому и юридическому обслуживанию.
+    </p>
+    <p class="home">Мы стараемся помочь Вам в вашем непростом деле, предупредить о потенциальных рисках, уберечь от возможных ошибок и подсказать пути для роста.
+      Наша цель — ваше развитие и для нас это не просто слова.
+    </p>
+    <hr />
+    <div class="columns-3">
+      <h2 class="section">Преимущества сотрудничества с Solid’s
+      </h2>
+      <div class="col-1">
+        <h3 class="engraving">
+          <img src="/css/engraving-small-alarmclock.gif" alt="" />Время
+        </h3>
+        <p class="mini engraving">Минимизация времени урегулирования проблем с органами контроля
+        </p>
+      </div>
+      <div class="col-2">
+        <h3 class="engraving">
+          <img src="/css/engraving-small-coin.gif" alt="" />Деньги
+        </h3>
+        <p class="mini engraving">Экономия средств на оплату труда штатного специалиста
+        </p>
+      </div>
+      <div class="col-3">
+        <h3 class="engraving">
+          <img src="/css/engraving-small-crown.gif" alt="" />Качество
+        </h3>
+        <p class="mini engraving">Получение высококачественных бухгалтерских услуг
+        </p>
+      </div>
+    </div>
+    <hr />
+    <div class="columns-3">
+      <div class="col-1">
+        <h2>Статьи и обзоры
+        </h2>
+        <p>
+          <a href="vyihod-uchastnika-iz-ooo.html">Выход участника из ООО
+          </a>
+        </p>
+        <p class="desc">15 сентября 2014, Ирина Чепурова
+        </p>
+        <p class="mini">Изменения в российском Гражданском кодексе, которые начали действовать 1 сентября 2014 г., существенно изменили рабочую базу юрлиц, в том числе и особенности выхода из компании ее участников.
+        </p>
+      </div>
+      <div class="col-2">
+        <h2>Новости и события
+        </h2>
+        <p>
+          <a href="vvedenie-ogranichenij-po-nalichnyim-raschetam.html">Введение ограничений по наличным расчетам
+          </a>
+        </p>
+        <p class="desc">16 ноября
+        </p>
+        <p class="mini">Речь об ограничении прав компаний, а также ИП при распределении наличных средств, поступивших в кассу организации по факту оказания услуг или продажи товаров.
+        </p>
+      </div>
+      <div class="col-3">
+        <h2>Ответы на вопросы
+        </h2>
+        <p>
+          <a href="kak-pravilno-ukazyivat-mesto-nahozhdeniya-organizacii.html">Подскажите, как с сентября 2014 г. нужно в уставе правильно указывать место нахождения организации?
+          </a>
+        </p>
+        <p class="desc">Светлана Подругина
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 
+
 <script>
+    /* eslint-disable indent */
+    import {mapGetters} from 'vuex'
+    import api from "~/api/index"
+    import PrimaryMenu from "~/components/PrimaryMenu"
 
-import { mapGetters } from 'vuex'
-import api from "../api/index";
-import postList from '../components/postList.vue'
-import recentPosts from '../components/recentPosts.vue'
-import categories from '../components/categories.vue'
-
-export default {
-  components: { postList, categories, recentPosts },
-  async asyncData({ params }) {
-    // We can use async/await ES6 feature
-    let { data } = await api.getPosts()
-
-    return {
-      posts: data
-    }
-  },
-  head() {
-    return {
-      title: `Nuxt WordPress | Home`,
-      meta: [
-        {
-          name: 'description',
-          content: 'This is the meta description of the content.'
+    export default {
+        components: {
+            PrimaryMenu
+        },
+        async asyncData({params}) {
+            // We can use async/await ES6 feature
+            let {data} = await api.getPages();
+            return {
+                pages: data
+            }
+        },
+        head() {
+            return {
+                title: `KLS Домашняя`,
+                meta: [
+                    {
+                        name: 'description',
+                        content: 'This is the meta description of the content.'
+                    }
+                ]
+            }
+        },
+        data() {
+            return {
+                title: 'default'
+            }
+        },
+        mounted() {
+            this.$store.dispatch('getPages')
+        },
+        computed: {
+            ...mapGetters([
+                'pages'
+            ])
         }
-      ]
     }
-  },
-  data() {
-    return {
-      title: 'default'
-    }
-  },
-  mounted() {
-    if (this.categories.length === 0) {
-      this.$store.dispatch('getCategories')
-    }
-  },
-  computed: {
-    ...mapGetters([
-      'categories'
-    ])
-  }
-}
 </script>
-
-<style>
-
-.header {
-  background-color:#1e5799;
-  background-image: linear-gradient(to right, #34495F, #3A5674);
-  text-align: center;
-}
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-top:60px;
-}
-
-.content {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  text-align: left;
-  margin: 0px auto;
-  line-height: 150%;
-  padding: 0px 30px 30px 30px;
-  max-width:1000px;
-}
-
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  /* 1 */
-  display: block;
-  font-weight: bold;
-  font-size: 100px;
-  color: #fff;
-  letter-spacing: 1px;
-  font-size: 52px;
-  padding:50px 5px 0px 5px;
-  text-align:center;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 28px;
-  color: #fff;
-  padding-bottom: 15px;
-  padding-left:5px;
-  text-align:center;
-}
-
-.links {
-  padding-top: 15px;
-}
-
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-
-  .title {
-    font-size: 26px;
-    line-height:36px;
-    padding:40px 10px 0px;
-  }
-  .subtitle {
-    font-size: 22px;
-    line-height:26px;
-    padding:5px 10px 15px;
-  }
-  h3 {
-    font-size: 34px;
-    font-weight: 700;
-    line-height: 44px;
-  }
-
-}
-</style>

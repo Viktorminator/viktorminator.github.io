@@ -1,53 +1,76 @@
 <template>
-  <div>
-    <nuxt/>
-  </div>
-</template>
+    <div>
+        <div id="layout">
+            <div id="header">
+                <div class="logo">
+                    <a href="/"></a>
+                </div>
+                <SecondaryMenu/>
+                <ul class="navigation-phone">
+                    <li class="phone">
+                        <span class="ya-phone">+7 (495) 698-97-97</span>
+                    </li>
+                    <li>
+                        <a href="pozvonite-mne.html">Позвоните мне
+                        </a>
+                    </li>
+                </ul>
+                <PrimaryMenu v-if="pages" :pages="pages"/>
+            </div>
+            <div id="content">
+                <nuxt/>
+            </div>
+            <div id="imprint">
+                <div class="copyrights">
+                    <p>©&nbsp;2012—2016
+                        <br> ООО&nbsp;«Солидс»
+                    </p>
 
-<style>
-html
-{
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-*, *:before, *:after
-{
-  box-sizing: border-box;
-  margin: 0;
-}
-.button--green
-{
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-.button--green:hover
-{
-  color: #fff;
-  background-color: #3b8070;
-}
-.button--grey
-{
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-.button--grey:hover
-{
-  color: #fff;
-  background-color: #35495e;
-}
-</style>
+                </div>
+                <div class="address">
+                    <p>Москва, ул. Земляной вал, дом 59, стр. 2, этаж 7, пом. № 11
+                        <a class="nobr" href="kontaktyi.html">Контактная информация
+                        </a>
+                    </p>
+                </div>
+                <!--p class="vcard" style="visibility:hidden;">
+        <p>
+        <span class="category">Компания</span>
+        <span class="fn org">Solid's</span>
+        </p>
+        <p class="adr">
+        <span class="locality">г. Москва</span>,
+        <span class="street-address">ул. Земляной вал, дом 59, стр. 2, этаж 7, пом. № 11 </span>
+        </p>
+        <p>Телефон: <span class="tel">+7 (495) 698-97-97</span></div>
+        <p>Мы работаем <span class="workhours">ежедневно с 09:00 до 24:00</span>
+        <span class="url">
+        <span class="value-title" title="/"> </span>
+        </span>
+        </p>
+        </p-->
+                <form action="search/" class="search" method="get">
+                    <input class="keywords" type="text" name="query" value="поиск"
+                           onclick="if (this.value == 'поиск') {this.value = '';}"
+                           onblur="if (this.value == '') {this.value = 'поиск';}"/>
+                    <input class="go" type="image" value="Искать!" src="/css/i/search.gif"/>
+                </form>
+            </div>
+        </div>
+
+
+        <!--nuxt/-->
+    </div>
+</template>
+<script>
+    /* eslint-disable indent */
+    import SecondaryMenu from '~/components/SecondaryMenu'
+    import PrimaryMenu from "../components/PrimaryMenu";
+
+    export default {
+        components: {
+            PrimaryMenu,
+            SecondaryMenu
+        }
+    }
+</script>

@@ -59,13 +59,27 @@ export const getCategory = ({ commit, state }, slug) => {
 export const getCategories = ({ commit, state }, slug) => {
   return new Promise((resolve, reject) => {
     api.getCategories(slug).then(
-      response => {
-        commit("CATEGORIES", response);
-        resolve(response);
-      },
-      response => {
-        reject(response);
-      }
-    );
+            response => {
+              commit("CATEGORIES", response);
+              resolve(response);
+            },
+            response => {
+              reject(response);
+            }
+        );
+  });
+};
+
+export const getPages = ({ commit, state }, slug) => {
+  return new Promise((resolve, reject) => {
+    api.getPages(slug).then(
+            response => {
+              commit("PAGES", response);
+              resolve(response);
+            },
+            response => {
+              reject(response);
+            }
+        );
   });
 };
