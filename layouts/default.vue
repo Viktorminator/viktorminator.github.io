@@ -15,7 +15,7 @@
                         </a>
                     </li>
                 </ul>
-                <PrimaryMenu v-if="pages" :pages="pages"/>
+                <PrimaryMenu :pages="pages"/>
             </div>
             <div id="content">
                 <nuxt/>
@@ -64,6 +64,8 @@
 </template>
 <script>
     /* eslint-disable indent */
+    import {mapGetters} from 'vuex'
+    import api from "~/api/index"
     import SecondaryMenu from '~/components/SecondaryMenu'
     import PrimaryMenu from "../components/PrimaryMenu";
 
@@ -71,6 +73,27 @@
         components: {
             PrimaryMenu,
             SecondaryMenu
+        },
+        async asyncData({params}) {
+            // We can use async/await ES6 feature
+            let {data} = await
+                api.getPages();
+            return {
+                pages: data
+            }
+        },
+        data() {
+            return {
+                title: 'default'
+            }
+        },
+        mounted() {
+            this.$store.dispatch('getPages')
+        },
+        computed: {
+            ...mapGetters([
+                'pages'
+            ])
         }
     }
 </script>
