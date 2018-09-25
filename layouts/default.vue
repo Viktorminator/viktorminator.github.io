@@ -15,7 +15,7 @@
                         </a>
                     </li>
                 </ul>
-                <PrimaryMenu :pages="pages"/>
+                <PrimaryMenu />
             </div>
             <div id="content">
                 <nuxt/>

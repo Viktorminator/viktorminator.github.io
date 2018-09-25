@@ -1,6 +1,5 @@
 <template>
     <div>
-        <PrimaryMenu :pages = "pages"/>
         <h1 class="big-home">
             <img src="/css/i/engraving-locomotive.gif" alt=""/>Локомотив вашего бизнеса
         </h1>
@@ -101,14 +100,8 @@
 
 <script>
     /* eslint-disable indent */
-    import {mapGetters} from 'vuex'
-    import api from "~/api/index"
-    import PrimaryMenu from "~/components/PrimaryMenu"
 
     export default {
-        components: {
-            PrimaryMenu
-        },
         head() {
             return {
                 title: `KLS Домашняя`,
@@ -120,30 +113,10 @@
                 ]
             }
         },
-        methods: {
-            slugToUrl(slug) {
-                return `/${slug}`
-            }
-        },
-        async asyncData({params}) {
-            // We can use async/await ES6 feature
-            let {data} = await api.getPages();
-            return {
-                pages: data
-            }
-        },
         data() {
             return {
                 title: 'default'
             }
-        },
-        mounted() {
-            this.$store.dispatch('getPages')
-        },
-        computed: {
-            ...mapGetters([
-                'pages'
-            ])
         }
     }
 </script>

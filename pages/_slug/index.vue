@@ -1,15 +1,10 @@
 <template>
     <div>
-        <primary-menu :pages="pages"/>
+        Some page
     </div>
 </template>
 <script>
-    import PrimaryMenu from "~/components/PrimaryMenu"
 
-    export default {
-        components: {PrimaryMenu},
-        props: ['pages']
-    }
 </script>
 
 <style>
