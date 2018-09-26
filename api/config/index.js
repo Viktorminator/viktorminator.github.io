@@ -1,3 +1,3 @@
 export default {
-  baseUrl: "http://nuxtpress.local/wp-json/wp/v2/"
+  baseUrl: "http://becool.local/wp-json/wp/v2/"
 };

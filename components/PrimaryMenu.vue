@@ -7,6 +7,7 @@
     </ul>
 </template>
 <script>
+
     export default {
         methods: {
             slugToUrl(slug) {
