@@ -1,6 +1,6 @@
 <template>
     <ul class="navigation-primary">
-        <li v-for="item in $store.state.pages.data">
+        <li v-for="item in $store.state.pages">
             <img src="css/engraving-25-accounting.gif" alt=""/>
             <nuxt-link :to="slugToUrl(item.slug)">{{ item.title }}</nuxt-link>
         </li>

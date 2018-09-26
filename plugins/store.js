@@ -10,7 +10,7 @@ const store = new Vuex.Store({
     },
     mutations: {
         replaceMenu(state, n) {
-            state.somedata = n;
+            state.pages.data = n;
         },
     },
     actions: {
