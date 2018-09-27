@@ -1,4 +1,13 @@
+/* nuxt.config.js */
+// only add `router.base = '/<repository-name>/'` if `DEPLOY_ENV` is `GH_PAGES`
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+    router: {
+        base: '/nuxt-wordpress-pwa/'
+    }
+} : {}
+
 module.exports = {
+    ...routerBase,
     /*
     ** Extend nuxt using nuxt modules system (Alpha)
     ** Learn more: https://github.com/nuxt/nuxt-modules
