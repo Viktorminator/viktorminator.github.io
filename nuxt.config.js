@@ -1,10 +1,3 @@
-/* nuxt.config.js */
-// only add `router.base = '/<repository-name>/'` if `DEPLOY_ENV` is `GH_PAGES`
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-    router: {
-        base: '/nuxt-wordpress-pwa/'
-    }
-} : {}
 
 module.exports = {
     /*
@@ -31,7 +24,6 @@ module.exports = {
     ** Customize the progress-bar color
     */
   loading: {color: "#3B8070"},
-    ...routerBase,
 
     /*
     ** Customize manifest.json
