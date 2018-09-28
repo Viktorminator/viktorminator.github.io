@@ -11,44 +11,26 @@
                         <span class="ya-phone">+7 (495) 698-97-97</span>
                     </li>
                     <li>
-                        <a href="pozvonite-mne.html">Позвоните мне
-                        </a>
+                        <nuxt-link to="callme">Позвоните мне</nuxt-link>
                     </li>
                 </ul>
-                <PrimaryMenu />
+                <PrimaryMenu/>
             </div>
             <div id="content">
                 <nuxt/>
             </div>
             <div id="imprint">
                 <div class="copyrights">
-                    <p>©&nbsp;2012—2016
+                    <p>©&nbsp;2012—2018
                         <br> ООО&nbsp;«Солидс»
                     </p>
 
                 </div>
                 <div class="address">
                     <p>Москва, ул. Земляной вал, дом 59, стр. 2, этаж 7, пом. № 11
-                        <a class="nobr" href="kontaktyi.html">Контактная информация
-                        </a>
+                        <a class="nobr" href="kontaktyi.html">Контактная информация</a>
                     </p>
                 </div>
-                <!--p class="vcard" style="visibility:hidden;">
-        <p>
-        <span class="category">Компания</span>
-        <span class="fn org">Solid's</span>
-        </p>
-        <p class="adr">
-        <span class="locality">г. Москва</span>,
-        <span class="street-address">ул. Земляной вал, дом 59, стр. 2, этаж 7, пом. № 11 </span>
-        </p>
-        <p>Телефон: <span class="tel">+7 (495) 698-97-97</span></div>
-        <p>Мы работаем <span class="workhours">ежедневно с 09:00 до 24:00</span>
-        <span class="url">
-        <span class="value-title" title="/"> </span>
-        </span>
-        </p>
-        </p-->
                 <form action="search/" class="search" method="get">
                     <input class="keywords" type="text" name="query" value="поиск"
                            onclick="if (this.value == 'поиск') {this.value = '';}"
