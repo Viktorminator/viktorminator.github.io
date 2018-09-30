@@ -18,7 +18,7 @@ module.exports = {
     ],
     link: [{rel: "icon", type: "image/x-icon", href: "/favicon.ico"},
             {rel: "stylesheet", type: "text/css", href: "/css/common.css"}],
-    bodyAttrs: {class: "color-scheme-1"}
+    bodyAttrs: {class: "color-scheme-6"}
   },
     /*
     ** Customize the progress-bar color

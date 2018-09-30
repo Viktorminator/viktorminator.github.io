@@ -10,9 +10,11 @@
                     <li class="phone">
                         <span class="ya-phone">+7 (495) 698-97-97</span>
                     </li>
-                    <li>
-                        <nuxt-link to="callme">Позвоните мне</nuxt-link>
-                    </li>
+                    <nuxt-link to="callme" tag="li" exact-active-class="selected">
+                        <div v-if="$route.path=='/callme'">
+                            <div class="angle"></div><strong>Позвоните мне</strong></div>
+                        <a v-else>Позвоните мне</a>
+                    </nuxt-link>
                 </ul>
                 <PrimaryMenu/>
             </div>
@@ -20,15 +22,16 @@
                 <nuxt/>
             </div>
             <div id="imprint">
+                <hr>
                 <div class="copyrights">
                     <p>©&nbsp;2012—2018
-                        <br> ООО&nbsp;«Солидс»
+                        <br> ООО&nbsp;«КЛС Групп»
                     </p>
 
                 </div>
                 <div class="address">
-                    <p>Москва, ул. Земляной вал, дом 59, стр. 2, этаж 7, пом. № 11
-                        <a class="nobr" href="kontaktyi.html">Контактная информация</a>
+                    <p>Москва,  адрес: 123112, г. Москва, Пресненская набережная, дом 6, строение 2, этаж 50, помещение 5014, телефон: +7(495)908-7346
+                        <nuxt-link to="/contacts">Контактная информация</nuxt-link></a>
                     </p>
                 </div>
                 <form action="search/" class="search" method="get">
