@@ -34,11 +34,7 @@
 
 <script>
     export default {
-        data() {
-            return {
-                phone: '+7(926)388-78-41'
-            }
-        }
+        pagePhone: '+7(926)388-78-41'
     }
 </script>
 

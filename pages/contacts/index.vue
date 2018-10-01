@@ -14,7 +14,7 @@
     <!--</ul>-->
     <h1>Контактная информация</h1>
         <p>Акционерное общество &laquo;КЛС ГРУПП&raquo; <br>
-            +7(925)1865984 <br>
+            +7(925)186-59-84 <br>
             aoklsgroup@gmail.com</p>
 
         <p>Общество с&nbsp;ограниченной ответственностью &laquo;КЛС-Трейд&raquo; <br>
@@ -22,7 +22,7 @@
             oooklstreyd@gmail.com</p>
 
         <p>Общество с&nbsp;ограниченной ответственностью &laquo;КЛС-Финанс&raquo; <br>
-            +7(926)131-7394 <br>
+            +7(926)131-73-94 <br>
             oooklsfinans@gmail.com</p>
     <div class="googlemap">
         <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/d/embed?mid=1mXkwTZGwpuMfFXFez75r7vQcTJU" width="640" height="480"></iframe>
@@ -32,7 +32,8 @@
 
 <script>
     export default {
-        name: "index"
+        name: "index",
+        pagePhone: "+7(925)186-59-84"
     }
 </script>
 

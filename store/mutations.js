@@ -16,8 +16,5 @@ export default {
   },
   CATEGORIES: (state, categories) => {
     state.categories = categories;
-  },
-  PHONE: (state, phone) => {
-    state.phone = phone;
   }
 };

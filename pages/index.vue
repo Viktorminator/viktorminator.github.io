@@ -116,11 +116,6 @@
                 ]
             }
         },
-        data() {
-            return {
-                title: 'default',
-                phone: '+7(926)388-78-41'
-            }
-        }
+        pagePhone: '+7(925)186-59-84'
     }
 </script>

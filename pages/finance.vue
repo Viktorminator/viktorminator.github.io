@@ -25,12 +25,8 @@
 
 <script>
     export default {
-        data() {
-            return {
-                title: 'default',
-                phone: '+7(926)131-7394 '
-            }
-        }
+        title: 'finance',
+        pagePhone: '+7(926)131-73-94'
     }
 </script>
 

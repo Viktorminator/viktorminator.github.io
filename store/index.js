@@ -28,8 +28,7 @@ const store = () => {
         name: null,
         slug: null
       },
-      categories: [],
-      phone: null
+      categories: []
     },
     actions,
     mutations,

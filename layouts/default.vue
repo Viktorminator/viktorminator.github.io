@@ -8,7 +8,7 @@
                 <SecondaryMenu/>
                 <ul class="navigation-phone">
                     <li class="phone">
-                        <span class="ya-phone">+7 (495) 698-97-97</span>
+                        <span class="ya-phone">{{ phone }}</span>
                     </li>
                     <nuxt-link to="callme" tag="li" exact-active-class="selected">
                         <div v-if="$route.path=='/callme'">
@@ -56,6 +56,14 @@
         components: {
             PrimaryMenu,
             SecondaryMenu
+        },
+        pagePhone: '+7 (495) 698-97-97',
+        computed: {
+            phone () {
+                return this.$route.matched.map((r) => {
+                    return (r.components.default.options ? r.components.default.options.pagePhone : r.components.default.pagePhone)
+                })[0]
+            }
         }
     }
 </script>
