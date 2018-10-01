@@ -83,3 +83,5 @@ export const getPages = ({ commit, state }, slug) => {
         );
   });
 };
+
+export const setPhone = ({ commit, state }) => state.phone;
