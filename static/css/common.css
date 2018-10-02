@@ -147,7 +147,7 @@ table + p.desc { margin-top: -8px; }
 
 #header .logo { position: relative; overflow: hidden; zoom: 1; width: 220px; height: 96px; left: 50%; margin: 16px 0 48px -110px; }
 #header .logo strong,
-#header .logo a { width: 220px; height: 96px; display: block; background: url(/css/i/solids-logo.gif) 0 0 no-repeat; }
+#header .logo a { width: 220px; height: 96px; display: block; background: url(/css/i/logo.png) 0 0 no-repeat; }
 #header .logo a { cursor: pointer; cursor: hand; }
 
 
@@ -230,7 +230,10 @@ table + p.desc { margin-top: -8px; }
 #header .navigation-primary  a:hover   { color: #e52e2e; }
 #header .navigation-primary  a:active  { color: #e52e2e; }
 
-
+#header .nuxt-link-exact-active a         { color: #0077b2; }
+#header .nuxt-link-exact-active  a:visited { color: #0077b2; }
+#header .nuxt-link-exact-active  a:hover   { color: #e52e2e; }
+#header .nuxt-link-exact-active  a:active  { color: #e52e2e; }
 
 /* контент */
 
@@ -267,6 +270,9 @@ table + p.desc { margin-top: -8px; }
 
 #content h1.big-home { position: relative; }
 #content h1.big-home img { position: absolute; top: 50%; left: 140%; margin-top: -60px; margin-left: -130px; }
+
+#content h1.big-section { position: relative; }
+#content h1.big-section img { position: absolute; top: 50%; left: 140%; margin-top: -60px; margin-left: -130px; }
 
 #content h3.smi { position: relative; }
 #content h3.smi img { display: block; border: 0; position: absolute; top: 0; left: -35%; }
@@ -542,8 +548,8 @@ table + p.desc { margin-top: -8px; }
 
 #imprint hr { margin: 72px 9% 0 9%; }
 
-#imprint .copyrights { width: 14%; left:  9%; margin-right: -100%; float: left; position: relative; -display: inline; margin-top: 20px; }
-#imprint .address    { width: 26%; left: 30%; margin-right: -100%; float: left; position: relative; -display: inline; margin-top: 20px; }
+#imprint .copyrights { width: 20%; left:  9%; margin-right: -100%; float: left; position: relative; -display: inline; margin-top: 20px; }
+#imprint .address    { width: 50%; left: 34%; margin-right: -100%; float: left; position: relative; -display: inline; margin-top: 20px; }
 #imprint .search     { width: 26%; left: 65%; margin-right: -100%; float: left; position: relative; -display: inline; margin-top: 23px; //margin-top: 17px; }
 
 #imprint p { font-family: 'PT Sans', sans-serif; font-size: 13px; line-height: 16px; margin-bottom: 16px; }

@@ -1,16 +1,16 @@
 <template>
   <div>
     <h1 class="big">О компании</h1>
-    <ul class="navigation-side"><li class="first"><a href="dostizheniya.html" title="Компетенции" >Компетенции</a></li>
+<!--    <ul class="navigation-side"><li class="first"><a href="dostizheniya.html" title="Компетенции" >Компетенции</a></li>
       <li><a href="rekvizityi.html" title="Реквизиты" >Реквизиты</a></li>
       <li><a href="komanda.html" title="Команда" >Команда</a></li>
       <li class="last"><a href="kontaktyi.html" title="Контактная информация" >Контактная информация</a></li>
-    </ul>
-    <p>Компания Solid's является надежным партнером, который поможет вам грамотно решить любую задачу в&nbsp;области бухгалтерии, юриспруденции, кадрового делопроизводства. Полагаясь на&nbsp;нас, вы&nbsp;никогда не&nbsp;окажетесь в&nbsp;затруднительном положении.</p>
+    </ul>-->
+    <p>Компания КЛС Групп является надежным партнером, который поможет вам грамотно решить любую задачу в&nbsp;области бухгалтерии, юриспруденции, кадрового делопроизводства. Полагаясь на&nbsp;нас, вы&nbsp;никогда не&nbsp;окажетесь в&nbsp;затруднительном положении.</p>
     <p>Имея богатый набор не&nbsp;только теоретических, но&nbsp;и практических знаний, любой из&nbsp;наших сотрудников с&nbsp;легкостью справится даже с&nbsp;самой сложной поставленной перед ним задачей.</p>
     <hr />
     <div class="columns-3">
-      <h2 class="section">Принципы Solid’s</h2>
+      <h2 class="section">Принципы КЛС Групп</h2>
       <div class="col-1">
         <h3 class="engraving"><img src="/css/i/engraving-small-lamp.gif" alt="" />Ум</h3>
         <p class="mini engraving">Профессионализм и&nbsp;высокое качество предоставляемых услуг</p>
