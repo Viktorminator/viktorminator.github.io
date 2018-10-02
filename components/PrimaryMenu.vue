@@ -1,20 +1,20 @@
 <template>
     <ul class="navigation-primary">
         <nuxt-link to="/" tag="li" exact-active-class="selected">
-            <div v-if="$route.path=='/'">
+            <div v-if="pathName=='index'">
                 <div class="angle"></div>
                 <strong><img src="css/engraving-25-locomotive.gif" alt=""/>КЛС Групп</strong></div>
             <a v-else><img src="css/engraving-25-locomotive.gif" alt=""/>КЛС Групп</a>
         </nuxt-link>
         <nuxt-link to="/trade" tag="li" exact-active-class="selected">
-            <div v-if="$route.path=='/trade'">
+            <div v-if="pathName=='trade'">
                 <div class="angle"></div>
                 <strong><img src="css/engraving-25-consulting.gif" alt=""/>КЛС Трейд</strong>
             </div>
             <a v-else><img src="css/engraving-25-consulting.gif" alt=""/>КЛС Трейд</a>
         </nuxt-link>
         <nuxt-link to="/finance" tag="li" exact-active-class="selected">
-            <div v-if="$route.path=='/finance'">
+            <div v-if="pathName=='finance'">
                 <div class="angle"></div>
                 <strong><img src="css/engraving-25-small-coin.gif" alt=""/>КЛС Финанс</strong></div>
 
@@ -22,7 +22,7 @@
         </nuxt-link>
 
         <nuxt-link to="/contacts" tag="li" exact-active-class="selected">
-            <div v-if="$route.path=='/contacts'">
+            <div v-if="pathName=='contacts'">
                 <div class="angle"></div>
                 <strong><img src="css/engraving-25-legal.gif" alt=""/>Контакты</strong>
             </div>
@@ -31,5 +31,11 @@
     </ul>
 </template>
 <script>
-    export default {}
+    export default {
+        computed: {
+            pathName: function() {
+                return this.$route.name
+            }
+        }
+    }
 </script>
