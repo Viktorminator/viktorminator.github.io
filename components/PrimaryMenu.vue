@@ -9,16 +9,16 @@
         <nuxt-link to="/trade" tag="li" exact-active-class="selected">
             <div v-if="pathName=='trade'">
                 <div class="angle"></div>
-                <strong><img src="css/engraving-25-consulting.gif" alt=""/>КЛС Трейд</strong>
+                <strong><img src="css/engraving-25-consulting.gif" alt=""/>КЛС-Трейд</strong>
             </div>
-            <a v-else><img src="css/engraving-25-consulting.gif" alt=""/>КЛС Трейд</a>
+            <a v-else><img src="css/engraving-25-consulting.gif" alt=""/>КЛС-Трейд</a>
         </nuxt-link>
         <nuxt-link to="/finance" tag="li" exact-active-class="selected">
             <div v-if="pathName=='finance'">
                 <div class="angle"></div>
-                <strong><img src="css/engraving-25-small-coin.gif" alt=""/>КЛС Финанс</strong></div>
+                <strong><img src="css/engraving-25-small-coin.gif" alt=""/>КЛС-Финанс</strong></div>
 
-            <a v-else><img src="css/engraving-25-small-coin.gif" alt=""/>КЛС Финанс</a>
+            <a v-else><img src="css/engraving-25-small-coin.gif" alt=""/>КЛС-Финанс</a>
         </nuxt-link>
 
         <nuxt-link to="/contacts" tag="li" exact-active-class="selected">
