@@ -12,8 +12,8 @@
                     </li>
                     <nuxt-link to="callme" tag="li" exact-active-class="selected">
                         <div v-if="$route.path=='/callme'">
-                            <div class="angle"></div><strong>Позвоните мне</strong></div>
-                        <a v-else>Позвоните мне</a>
+                            <div class="angle"></div><strong>Обратный звонок</strong></div>
+                        <a v-else>Обратный звонок</a>
                     </nuxt-link>
                 </ul>
                 <PrimaryMenu/>

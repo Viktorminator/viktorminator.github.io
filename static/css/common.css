@@ -276,12 +276,18 @@ table + p.desc { margin-top: -8px; }
 
 #content h3.smi { position: relative; }
 #content h3.smi img { display: block; border: 0; position: absolute; top: 0; left: -35%; }
-
-
+#content .pdf-content {
+    margin-left: 9%;
+    width: 80%;
+    height: 100vh;
+}
+#content #pdf {
+    height: 100%;
+}
 
 /* плашка «Внимание» */
 
-#content .plate-attention { position: relative; overflow: hidden; zoom: 1; width: 33%; float: right; margin-top: -7px; margin-right: 9%; -margin-right: 4.5%; padding-top: 23px; padding-bottom: 25px; }
+#content .plate-attention { position: relative; overflow: hidden; zoom: 1; width: 33%; float: right; margin-top: -7px; margin-right: 9%; -margin-right: 4.5%; margin-bottom: 40px; padding-top: 23px; padding-bottom: 25px; }
 #content .plate-attention p { width: auto; margin: 0 30px 16px 30px; font-style: italic; }
 #content .plate-attention p:last-child { margin-bottom: 0; }
 #content .plate-attention .cor-tl,

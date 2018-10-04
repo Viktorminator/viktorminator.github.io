@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1 class="big">
-            OOO &laquo;КЛС Финанс&raquo;
+            OOO &laquo;КЛС-Финанс&raquo;
         </h1>
         <div class="plate-attention">
             <div class="cor-tl">
@@ -19,7 +19,14 @@
                 <br/>10:00—18:00 в будние дни.
             </p>
         </div>
-        <p class="home">OOO &laquo;КЛС Финанс&raquo; на данный момент занимается строительством жилой недвижимости.</p>
+        <p class="home">OOO &laquo;КЛС-Финанс&raquo; на данный момент занимается строительством жилой недвижимости.</p>
+        <p class="home">
+            <a href="#" class="embed-link">Нажмите, чтобы посмотреть проект на сайте.</a>
+        </p>
+        <div class="pdf-content">
+            <div id="results" class="hidden"></div>
+            <div id="pdf"></div>
+        </div>
     </div>
 </template>
 
