@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2 class="big">Оставьте свой номер мы перезвоним</h2>
+        <h2 class="section">Оставьте свой номер мы перезвоним</h2>
         <div class="plate-solid plate-center">
             <div class="cor-tl"></div>
             <div class="cor-tr"></div>

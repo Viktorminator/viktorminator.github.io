@@ -21,6 +21,9 @@
         </div>
         <p class="home">OOO &laquo;КЛС-Финанс&raquo; на данный момент занимается строительством жилой недвижимости.</p>
         <p class="home">
+            <a href="/pdf/kls-project.pdf" target="_blank" rel="nofollow norefferer">Посмотреть проект в новой вкладке</a>
+        </p>
+        <p class="home">
             <a href="#" class="embed-link">Нажмите, чтобы посмотреть проект на сайте.</a>
         </p>
         <div class="pdf-content">
