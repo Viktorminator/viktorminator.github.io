@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1 class="big-home">
-            <img src="/css/i/engraving-locomotive.gif" alt=""/>Локомотив вашего бизнеса
+            Локомотив вашего бизнеса
         </h1>
         <div class="plate-attention">
             <div class="cor-tl">
@@ -107,11 +107,11 @@
     export default {
         head() {
             return {
-                title: `KLS Домашняя`,
+                title: `КЛС Групп главная`,
                 meta: [
                     {
                         name: 'description',
-                        content: 'This is the meta description of the content.'
+                        content: 'КЛС Групп.'
                     }
                 ]
             }
