@@ -1,11 +1,12 @@
 {
   "name": "wp-vue-ssr",
   "version": "1.0.0",
-  "description": "A vue.js server side rendered app that connects to Wordpress",
-  "author": "Sean Hise",
+  "description": "",
+  "author": "",
   "private": true,
   "dependencies": {
     "@nuxtjs/pwa": "latest",
+    "@nuxtjs/sitemap": "^0.1.1",
     "axios": "^0.16.2",
     "bulma": "^0.4.0",
     "hover.css": "^2.2.0",

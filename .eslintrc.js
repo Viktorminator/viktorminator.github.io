@@ -10,7 +10,7 @@ module.exports = {
   plugins: ["html"],
   // add your custom rules here
   rules: {
-    'indent': 'off',
+    "indent": 'off',
     "space-before-function-paren": 0,
     semi: 0,
     quotes: 0

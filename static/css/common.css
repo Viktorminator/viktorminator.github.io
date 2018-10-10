@@ -147,7 +147,7 @@ table + p.desc { margin-top: -8px; }
 
 #header .logo { position: relative; overflow: hidden; zoom: 1; width: 220px; height: 96px; left: 50%; margin: 16px 0 48px -110px; }
 #header .logo strong,
-#header .logo a { width: 220px; height: 96px; display: block; background: url(/css/i/logo.png) 0 0 no-repeat; }
+#header .logo a { width: 220px; height: 96px; display: block; background: url(/css/i/KLS.png) 0 0 no-repeat; }
 #header .logo a { cursor: pointer; cursor: hand; }
 
 
