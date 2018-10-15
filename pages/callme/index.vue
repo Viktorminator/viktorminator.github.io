@@ -24,7 +24,7 @@
                     <dt><label for="form-question">Вопрос или<br>ситуация</label></dt>
                     <dd><textarea id="form-question" name="form-question" rows="5" cols="20" tabindex="5" value="" data-validation="required"></textarea></dd>
                 </dl>
-                <div class="buttons"><div class="button"><a href="#" onclick="document.getElementById('myform').submit();"><span>Отправить</span></a></div></div>
+                <div class="buttons"><div class="button"><a href="#" id="submission"><span>Отправить</span></a></div></div>
             </form>
         </div>
     </div>

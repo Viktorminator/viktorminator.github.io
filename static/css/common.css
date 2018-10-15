@@ -132,7 +132,7 @@ table + p.desc { margin-top: -8px; }
 
 /* макет */
 
-#layout { width: 100%; background: #ffffff; margin-left: auto; margin-right: auto; text-align: left; min-width: 999px; max-width: 1280px; -width: expression( document.body.clientWidth < 1000 ? '999px' : document.body.clientWidth > 1281 ? '1280px' : '100%' ); }
+#layout { width: 100%; background: #fff8dc; margin-left: auto; margin-right: auto; text-align: left; min-width: 999px; max-width: 1280px; -width: expression( document.body.clientWidth < 1000 ? '999px' : document.body.clientWidth > 1281 ? '1280px' : '100%' ); }
 #layout { -moz-box-shadow: 0 0 16px rgba(0,0,0,0.5); -webkit-box-shadow: 0 0 16px rgba(0,0,0,0.5); box-shadow: 0 0 16px rgba(0,0,0,0.5); }
 
 
@@ -293,7 +293,7 @@ table + p.desc { margin-top: -8px; }
 #content .plate-attention .cor-tl,
 #content .plate-attention .cor-tr,
 #content .plate-attention .cor-bl,
-#content .plate-attention .cor-br { position: absolute; width: 20px; height: 20px; background: #ffffff; -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; //behavior: url(/PIE.php); }
+#content .plate-attention .cor-br { position: absolute; width: 20px; height: 20px; background: #fff8dc; -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; //behavior: url(/PIE.php); }
 #content .plate-attention .cor-tl { top: -10px; left: -10px; }
 #content .plate-attention .cor-tr { top: -10px; right: -10px; }
 #content .plate-attention .cor-bl { bottom: -10px; left: -10px; }

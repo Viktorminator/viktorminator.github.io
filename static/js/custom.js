@@ -26,10 +26,10 @@ $(document).ready(function() {
 			.done(function(data) {
 				// log data to the console so we can see
 				console.log(data);
-				
+
 				// here we will handle errors and validation messages
 			});
-		
+
 		// stop the form from submitting the normal way and refreshing the page
 		event.preventDefault();
 	});
