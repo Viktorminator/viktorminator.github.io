@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1 class="big-home">
-            Локомотив вашего бизнеса
+            Локомотив нашего бизнеса
         </h1>
         <div class="plate-attention">
             <div class="cor-tl">
@@ -32,27 +32,27 @@
 
         <p class="home">В&nbsp;КЛС-Групп входят дочерние компании: ООО &laquo;КЛС-Финанс&raquo; и&nbsp;ООО &laquo;КЛС-Трейд&raquo;, а&nbsp;также ООО &laquo;МКК Кредди&raquo;</p>
         <hr/>
-        <div class="columns-3">
+        <div class="columns-3 advantages">
             <h2 class="section">Преимущества сотрудничества с КЛС&nbsp;Групп</h2>
             <div class="col-1">
                 <h3 class="engraving">
                     <img src="/css/engraving-small-alarmclock.gif" alt=""/>Время
                 </h3>
-                <p class="mini engraving">Минимизация времени урегулирования проблем с органами контроля
+                <p class="mini engraving">
                 </p>
             </div>
             <div class="col-2">
                 <h3 class="engraving">
                     <img src="/css/engraving-small-coin.gif" alt=""/>Деньги
                 </h3>
-                <p class="mini engraving">Экономия средств на оплату труда штатного специалиста
+                <p class="mini engraving">
                 </p>
             </div>
             <div class="col-3">
                 <h3 class="engraving">
                     <img src="/css/engraving-small-crown.gif" alt=""/>Качество
                 </h3>
-                <p class="mini engraving">Получение высококачественных  услуг
+                <p class="mini engraving">
                 </p>
             </div>
         </div>
